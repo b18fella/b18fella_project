@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Intent aboutIntent = new Intent(this, aboutActivity.class);
-            String aboutMessage = "This is a about page!";
+            String aboutMessage = "This app contains information about gaming gear for PC. For example what type of gear it is, what company it is from and how much it costs.";
             aboutIntent.putExtra(X_MESSAGE, aboutMessage);
             startActivity(aboutIntent);
             return true;
@@ -103,8 +103,6 @@ public class MainActivity extends AppCompatActivity {
 
             // Will contain the raw JSON response as a Java string.
             String forecastJsonStr = null;
-
-            Log.d("error fel här", "Fel här");
 
             try {
                 // Construct the URL for the Internet service
