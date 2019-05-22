@@ -1,5 +1,6 @@
 package com.example.b18fella_project;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> listData;
     private ArrayList<gamingGear> mountainArrayList = new ArrayList<>();
     private ArrayAdapter<gamingGear> adapter;
+
+    public static final String X_MESSAGE = "com.example.android.twoactivities.extra.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent aboutIntent = new Intent(this, aboutActivity.class);
+            String aboutMessage = "This is a about page!";
+            aboutIntent.putExtra(X_MESSAGE, aboutMessage);
+            startActivity(aboutIntent);
             return true;
         } else if (id == R.id.refresh_data) {
             adapter.clear();
