@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Intent aboutIntent = new Intent(this, aboutActivity.class);
-            String aboutMessage = "This app contains information about gaming gear for PC. For example what type of gear it is, what company it is from and how much it costs.";
+            String aboutMessage = "This app is for people who's looking to buy gaming gear.";
             aboutIntent.putExtra(X_MESSAGE, aboutMessage);
             startActivity(aboutIntent);
             return true;
